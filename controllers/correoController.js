@@ -13,8 +13,8 @@ const envioCorreo = (req=request,resp=response) =>{
         host:'smtp.gmail.com',
         post:587,
         auth:{
-        user:'teatendemosorpotunidad@gmail.com',
-        pass:'nvzvwapckiqzljgg'
+        user:EMAIL,
+        pass:API_PAS
     }
     });
 
