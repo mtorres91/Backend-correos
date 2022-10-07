@@ -13,5 +13,6 @@ app.use(bodyparser.urlencoded({extended:false}));
 app.use(require('./routes/correoRoutes'));
 
 app.listen('3000', ()=>{
+    
     console.log('escuchando');
 })
