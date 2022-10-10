@@ -1,21 +1,6 @@
 const express = require('express');
 const app = express();
 let cors = require('cors');
-services.AddCors(options =>
-
-    {
-    
-    options.AddPolicy(
-    
-    name, "AllowOrigin",
-    
-    builder => {
-    
-    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-    
-    });
-    
-    });
     
 
 const bodyparser = require('body-parser');
@@ -25,7 +10,11 @@ const bodyparser = require('body-parser');
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended:false}));
-app.use(cors());
+app.use(
+    cors({
+        origin: "*"
+    }
+));
 app.use(require('./routes/correoRoutes'));
 
 app.get('/',(req,res)=>
