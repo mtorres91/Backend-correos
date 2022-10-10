@@ -28,6 +28,11 @@ app.use(bodyparser.urlencoded({extended:false}));
 app.use(cors());
 app.use(require('./routes/correoRoutes'));
 
+app.get('/',(req,res)=>
+    {res.send('hello world')
+
+    })
+
 app.listen('3000', ()=>{
 
     console.log('escuchando');
