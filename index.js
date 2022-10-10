@@ -2,14 +2,14 @@ const express = require('express');
 const app = express();
 let cors = require('cors');
     
-
-const bodyparser = require('body-parser');
-
 app.use(
     cors({
         origin: "*"
     }
 ));
+
+const bodyparser = require('body-parser');
+
 
 
 app.use(bodyparser.json());
