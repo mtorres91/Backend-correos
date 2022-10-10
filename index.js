@@ -22,11 +22,10 @@ const bodyparser = require('body-parser');
 
 
 
-app.use(cors(corsOptions));
-app.use(cors({ origin: "*"}));
+
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended:false}));
-
+app.use(cors());
 app.use(require('./routes/correoRoutes'));
 
 app.listen('3000', ()=>{
