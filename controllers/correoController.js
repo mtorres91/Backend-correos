@@ -3,7 +3,6 @@ const nodeMailer = require ('nodemailer');
 require('dotenv').config();
 
 
-
 const envioCorreo = (req=request,resp=response) =>{
     let body = req.body;
 
